@@ -29,10 +29,11 @@ module.exports = {
         host: [{ host: "222.107.251.211", port: "40022" }],
         ref: "origin/master", // 리모트 브랜치
         repo: "git@github.com:byungchang/pm2_test.git", // Github 프로젝트 주소
-        path: "/var/pm2_test", // 원격 서버에서 프로젝트를 생성할 위치
+        ssh_options: 'StrictHostKeyChecking=no',
+        path: "/var/www/pm2_test", // 원격 서버에서 프로젝트를 생성할 위치
         // 프로젝트 배포 후 실행할 명령어
-        //"post-deploy":
-          //"npm install && pm2 reload ecosystem.config.js --env development"
+        "post-deploy":
+          "npm install && pm2 reload ecosystem.config.js --env development"
       },
       production: {
         // 운영 환경설정
