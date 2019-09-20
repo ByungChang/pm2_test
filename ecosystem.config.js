@@ -11,12 +11,12 @@ module.exports = {
         max_memory_restart: "512M", // 프로그램의 메모리 크기가 일정 크기 이상이 되면 재시작한다.
         env: {
           // 개발 환경설정
-          PORT: 3000,
+          PORT: 3001,
           NODE_ENV: "development"
         },
         env_production: {
           // 운영 환경설정 (--env production 옵션으로 지정할 수 있다.)
-          PORT: 3001,
+          PORT: 3002,
           NODE_ENV: "production"
         }
       }
@@ -31,8 +31,8 @@ module.exports = {
         repo: "git@github.com:byungchang/pm2_test.git", // Github 프로젝트 주소
         path: "/root/node_test/pm2_con", // 원격 서버에서 프로젝트를 생성할 위치
         // 프로젝트 배포 후 실행할 명령어
-        "post-deploy":
-          "npm install && pm2 reload ecosystem.config.js --env development"
+        //"post-deploy":
+          //"npm install && pm2 reload ecosystem.config.js --env development"
       },
       production: {
         // 운영 환경설정
