@@ -26,7 +26,7 @@ module.exports = {
       development: {
         // 개발 환경설정
         user: "root",
-        host: [{ host: "222.107.251.211", port: "40022" }],
+        host: [{ host: "192.168.0.201"}],
         ref: "origin/master", // 리모트 브랜치
         repo: "git@github.com:byungchang/pm2_test.git", // Github 프로젝트 주소
         ssh_options: 'StrictHostKeyChecking=no',
